@@ -11,7 +11,7 @@ This project is a calculator designed to perform arithmetic operations on quater
 
 ## Installation
 ### Prerequisites
-- **Java Development Kit (JDK) 12 or higher**
+- **Java Development Kit (JDK) 21 or higher**
 - **IntelliJ IDEA**
 
 ### Setup Instructions
@@ -27,7 +27,7 @@ This project is a calculator designed to perform arithmetic operations on quater
     - IntelliJ will automatically detect and import the project.
 
 3. **Build the Project:**
-    - Ensure that the correct JDK (12) is configured.
+    - Ensure that the correct JDK (21) is configured.
     - Build the project using the Build menu or by pressing `Ctrl+F9`.
 
 4. **Run the Application:**
@@ -75,7 +75,8 @@ once structure is determined continue to update-->
 - Ensure all tests pass before committing to the repository.
 
 ## Dependencies
-- The project uses standard Java libraries. No additional dependencies are required.
+- The project uses standard Java libraries. 
+- JUnit5.8.1, opentest4j-1.2.0.jar, apiguardian-api-1.1.2.jar for testing
 <!-- update this with other dependencies if needed-->
 
 ## Screenshots

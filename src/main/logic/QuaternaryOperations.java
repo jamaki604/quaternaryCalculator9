@@ -25,6 +25,14 @@ public class QuaternaryOperations {
     }
 
     public String subtraction(String firstQuaternary, String secondQuaternary) {
-        return null;
+        //Convert Quaternary numbers into Decimals first
+        int decimal1 = convertToDecimal(firstQuaternary);
+        int decimal2 = convertToDecimal(secondQuaternary);
+
+        //Subtract the decimals
+        int decimalDifference = decimal1 - decimal2;
+
+        //Convert the Decimal Difference to Quaternary and return it
+        return convertToQuaternary(decimalDifference);
     }
 }

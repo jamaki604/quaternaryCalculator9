@@ -47,9 +47,9 @@ public class QuaternaryOperationsTest {
     @Test
     void subtraction() {
         //Testing addition of quaternary 12 and 10
-        assertEquals("110", operations.subtraction("231","123"));
+        assertEquals("102", operations.subtraction("231","123"));
 
         //Testing addition of quaternary 25 and 22
-        assertEquals("12", operations.subtraction("33","21"));
+        assertEquals("-102", operations.subtraction("123","231"));
     }
 }

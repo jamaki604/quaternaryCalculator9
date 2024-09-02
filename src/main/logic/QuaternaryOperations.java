@@ -24,4 +24,7 @@ public class QuaternaryOperations {
 
     }
 
+    public String subtraction(String firstQuaternary, String secondQuaternary) {
+        return null;
+    }
 }

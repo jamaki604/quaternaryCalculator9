@@ -37,19 +37,37 @@ public class QuaternaryOperationsTest {
 
     @Test
     void addition() {
-        //Testing addition of quaternary 12 and 10
+        //Testing addition of quaternary(decimal) 12(6) and 10(4) = 22(10)
         assertEquals("22", operations.addition("12","10"));
 
-        //Testing addition of quaternary 25 and 22
+        //Testing addition of quaternary(decimal) 23(11) and 22(10) = 111(21)
         assertEquals("111", operations.addition("23","22"));
     }
 
     @Test
     void subtraction() {
-        //Testing addition of quaternary 12 and 10
+        //Testing subtraction of quaternary(decimal) 231(45) and 123(27) = 102(18)
         assertEquals("102", operations.subtraction("231","123"));
 
-        //Testing addition of quaternary 25 and 22
+        //Testing subtraction of quaternary(decimal) 123(27) and 231(45) = -102(-18)
         assertEquals("-102", operations.subtraction("123","231"));
+    }
+
+    @Test
+    void multiplication() {
+        //Testing multiplication of quaternary(decimal) 2(2) and 13(7) = 32(14)
+        assertEquals("32", operations.multiplication("2", "13"));
+
+        //Testing multiplication of quaternary(decimal) 11(2) and 110(20) = 1210(100)
+        assertEquals("1210", operations.multiplication("11","110"));
+    }
+
+    @Test
+    void division() {
+        //Testing division of quaternary(decimal) 13(7) and 3(3) = 2(2)
+        assertEquals("2", operations.division("13","3"));
+
+        //Testing division of quaternary(decimal) 1203(99) and 201(33) = 3(3)
+        assertEquals("3", operations.division("1203","201"));
     }
 }

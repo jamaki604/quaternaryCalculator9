@@ -56,8 +56,8 @@ once structure is determined continue to update-->
 - **Jake King**: Set up the project structure and handled Git integration.
 - **Tia Self**: Developed UI.
 - **Dennis Vo**:
-- **Spencer Smith**:
-- **Solomon Siang**: Developed Logic
+- **Spencer Smith**: Developed Logic and Testing for Multiplication/Division
+- **Solomon Siang**: Developed Logic and Testing for Addition/Subtraction
 
 ## Meetings and Discussions
 <!-- Format for adding meetings below:

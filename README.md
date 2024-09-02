@@ -57,7 +57,7 @@ once structure is determined continue to update-->
 - **Tia Self**: Developed UI.
 - **Dennis Vo**:
 - **Spencer Smith**:
-- **Solomon Siang**:
+- **Solomon Siang**: Developed Logic
 
 ## Meetings and Discussions
 <!-- Format for adding meetings below:

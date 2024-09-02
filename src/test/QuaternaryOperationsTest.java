@@ -30,5 +30,18 @@ public class QuaternaryOperationsTest {
 
         // Test converting decimal 4 to quaternary "10"
         assertEquals("10", operations.convertToQuaternary(4));
+
+        //Test converting decimal 45 into quaternary "231"
+        assertEquals("231", operations.convertToQuaternary(45));
     }
+
+    @Test
+    void addition() {
+        //Testing addition of quaternary 12 and 10
+        assertEquals("22", operations.addition("12","10"));
+
+        //Testing addition of quaternary 25 and 22
+        assertEquals("111", operations.addition("23","22"));
+    }
+
 }

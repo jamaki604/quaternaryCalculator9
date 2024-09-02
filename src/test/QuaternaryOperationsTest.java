@@ -70,4 +70,22 @@ public class QuaternaryOperationsTest {
         //Testing division of quaternary(decimal) 1203(99) and 201(33) = 3(3)
         assertEquals("3", operations.division("1203","201"));
     }
+
+    @Test
+    void squareRoot() {
+        //Test square root of quaternary(decimal) 10(4) = 2(2)
+        assertEquals("2", operations.squareRoot("10"));
+
+        //Test square root of quaternary(decimal) 121(25) = 11(5)
+        assertEquals("11", operations.squareRoot("121"));
+    }
+
+    @Test
+    void square() {
+        //Test squaring quaternary(decimal) 2(2) = 10(4)
+        assertEquals("10", operations.square("2"));
+
+        //Test squaring quaternary(decimal) 11(5) = 121(25)
+        assertEquals("121", operations.square("11"));
+    }
 }

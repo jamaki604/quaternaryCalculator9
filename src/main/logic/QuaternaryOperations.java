@@ -59,4 +59,27 @@ public class QuaternaryOperations {
         //Convert decimal product back to quaternary and return
         return convertToQuaternary(decimalQuotient);
     }
+
+    public static String squareRoot(String firstQuaternary) {
+        //Convert quaternary number into decimal
+        int decimal = convertToDecimal(firstQuaternary);
+
+        //Square root the decimal
+        int sqrtDecimal = (int)Math.sqrt(decimal);
+
+        //Convert decimal product back to quaternary and return
+        return convertToQuaternary(sqrtDecimal);
+    }
+    public static String square(String firstQuaternary) {
+        //Convert quaternary numbers into decimal
+        int decimal = convertToDecimal(firstQuaternary);
+
+        //Square the decimal
+        int squaredDecimal = decimal * decimal;
+
+        //Convert decimal product back to quaternary and return
+        return convertToQuaternary(squaredDecimal);
+    }
+
+
 }

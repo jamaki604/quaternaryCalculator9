@@ -15,6 +15,10 @@ public class Calculator {
         while (true) {
             System.out.println("Enter your first quaternary number:");
             firstNum = scanner.next();
+            if (!operations.validQuaternary(firstNum)) {
+                System.out.println("Error: Invalid Quaternary Number. Enter a number including only the digits 0, 1, 2, or 3");
+                continue;
+            }
 
             System.out.println("Enter operator (+, -, *, /, ^2, √ or q to quit):");
             operator = scanner.next().charAt(0);
@@ -34,6 +38,11 @@ public class Calculator {
             } else {
                 System.out.println("Enter your second quaternary number:");
                 secondNum = scanner.next();
+                if (!operations.validQuaternary(secondNum)) {
+                    System.out.println("Error: Invalid Quaternary Number. Enter a number including only the digits 0, 1, 2, or 3");
+                    continue;
+                }
+
 
                 switch (operator) {
                     case '+':

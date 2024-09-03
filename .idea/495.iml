@@ -55,5 +55,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" scope="TEST" name="junit" level="project" />
+    <orderEntry type="library" exported="" name="openjfx.javafx.controls" level="project" />
   </component>
 </module>

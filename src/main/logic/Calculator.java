@@ -10,6 +10,8 @@ public class Calculator {
 
         String firstNum, secondNum;
         char operator;
+        String result = "";
+
         while (true) {
             System.out.println("Enter your first quaternary number:");
             firstNum = scanner.next();
@@ -23,9 +25,9 @@ public class Calculator {
             if (operator == '^' || operator == '√') {
                 //Handle single operand operations
                 if (operator == '^') {
-                    System.out.println("Result (Quaternary): " + operations.square(firstNum));
+                    result = operations.square(firstNum);
                 } else if (operator == '√') {
-                    System.out.println("Result (Quaternary): " + operations.squareRoot(firstNum));
+                    result = operations.squareRoot(firstNum);
                 }
             } else {
                 System.out.println("Enter your second quaternary number:");
@@ -33,25 +35,26 @@ public class Calculator {
 
                 switch (operator) {
                     case '+':
-                        System.out.println("Result (Quaternary): " + operations.addition(firstNum, secondNum));
+                        result = operations.addition(firstNum, secondNum);
                         break;
                     case '-':
-                        System.out.println("Result (Quaternary): " + operations.subtraction(firstNum, secondNum));
+                        result = operations.subtraction(firstNum, secondNum);
                         break;
                     case '*':
-                        System.out.println("Result (Quaternary): " + operations.multiplication(firstNum, secondNum));
+                        result = operations.multiplication(firstNum, secondNum);
                         break;
                     case '/':
                         if (operations.convertToDecimal(secondNum) == 0) {
                             System.out.println("Error: Division by zero.");
                         } else {
-                            System.out.println("Result (Quaternary): " + operations.division(firstNum, secondNum));
+                            result = operations.division(firstNum, secondNum);
                         }
                         break;
                     default:
                         System.out.println("Invalid operator.");
                         break;
                 }
+                System.out.printf("Result: %s (Quaternary), %d (Decimal)\n", result, operations.convertToDecimal(result));
             }
         }
         scanner.close();

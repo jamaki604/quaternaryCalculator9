@@ -1,4 +1,4 @@
-package src.main.logic;
+import src.main.logic.QuaternaryOperations;
 
 import java.util.Scanner;
 

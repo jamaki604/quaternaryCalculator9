@@ -55,9 +55,9 @@ once structure is determined continue to update-->
 ## Team Members and Contributions
 - **Jake King**: Set up the project structure and handled Git integration.
 - **Tia Self**: Developed UI.
-- **Dennis Vo**:
-- **Spencer Smith**: Developed Logic and Testing for Multiplication/Division
-- **Solomon Siang**: Developed Logic and Testing for Addition/Subtraction
+- **Dennis Vo**: Developed Logic and Testing for Square Root/Square.
+- **Spencer Smith**: Developed Logic and Testing for Multiplication/Division.
+- **Solomon Siang**: Developed Logic and Testing for Addition/Subtraction.
 
 ## Meetings and Discussions
 ## Meeting 1: 8/30/2024 5:00 PM

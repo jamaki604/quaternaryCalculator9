@@ -80,6 +80,4 @@ public class QuaternaryOperations {
         //Convert decimal product back to quaternary and return
         return convertToQuaternary(squaredDecimal);
     }
-
-
 }

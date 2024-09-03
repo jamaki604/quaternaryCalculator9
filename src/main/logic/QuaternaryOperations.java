@@ -80,4 +80,8 @@ public class QuaternaryOperations {
         //Convert decimal product back to quaternary and return
         return convertToQuaternary(squaredDecimal);
     }
+
+    public boolean validQuaternary(String quaternaryNumber){
+        return quaternaryNumber.matches("[0-3]+");
+    }
 }

@@ -1,4 +1,4 @@
-import src.main.logic.QuaternaryOperations;
+package src.main.logic;
 
 import java.util.Scanner;
 
@@ -26,8 +26,10 @@ public class Calculator {
                 //Handle single operand operations
                 if (operator == '^') {
                     result = operations.square(firstNum);
+                    System.out.printf("Result: %s (Quaternary), %d (Decimal)\n", result, operations.convertToDecimal(result));
                 } else if (operator == '√') {
                     result = operations.squareRoot(firstNum);
+                    System.out.printf("Result: %s (Quaternary), %d (Decimal)\n", result, operations.convertToDecimal(result));
                 }
             } else {
                 System.out.println("Enter your second quaternary number:");

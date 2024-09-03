@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="exponentButton" layoutX="184.0" layoutY="177.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="^" />
+      <Button fx:id="squareRootButton" layoutX="184.0" layoutY="109.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="√" />
+      <Button fx:id="oneButton" layoutX="113.0" layoutY="177.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="1" />
+      <Button fx:id="additionButton" layoutX="43.0" layoutY="109.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="+" />
+      <Button fx:id="zeroButton" layoutX="43.0" layoutY="177.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="0" />
+      <Button fx:id="twoButton" layoutX="43.0" layoutY="238.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="2" />
+      <Button fx:id="threeButton" layoutX="113.0" layoutY="238.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="3" />
+      <Button fx:id="subtractionButton" layoutX="113.0" layoutY="109.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="-" />
+      <Button fx:id="equalsButton" layoutX="184.0" layoutY="238.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="=" />
+      <TextFlow fx:id="inputBox" layoutX="42.0" layoutY="24.0" prefHeight="26.0" prefWidth="202.0" />
+      <TextFlow fx:id="outputBox" layoutX="43.0" layoutY="57.0" prefHeight="42.0" prefWidth="200.0" />
+   </children>
+</Pane>

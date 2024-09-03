@@ -61,9 +61,11 @@ once structure is determined continue to update-->
 
 ## Meetings and Discussions
 ## Meeting 1: 8/30/2024 5:00 PM
+- **Medium:** Slack Call
 - **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo, Jake King
 - **Discussion:** Initial project setup and task distribution
 ## Meeting 2: 9/3/2024 12:00 PM
+- **Medium:** In-person 
 - **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo
 - **Discussion:** Discussed the Calculator Class and what was needed before starting the UI. 
 <!-- Format for adding meetings below:

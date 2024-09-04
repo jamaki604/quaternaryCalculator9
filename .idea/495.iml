@@ -56,5 +56,6 @@
     </orderEntry>
     <orderEntry type="library" exported="" scope="TEST" name="junit" level="project" />
     <orderEntry type="library" exported="" name="openjfx.javafx.controls" level="project" />
+    <orderEntry type="library" name="javafx-swt" level="application" />
   </component>
 </module>

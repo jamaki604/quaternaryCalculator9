@@ -55,19 +55,24 @@ once structure is determined continue to update-->
 ## Team Members and Contributions
 - **Jake King**: Set up the project structure and handled Git integration.
 - **Tia Self**: Developed UI.
-- **Dennis Vo**: Developed Logic and Testing for Square Root/Square.
-- **Spencer Smith**: Developed Logic and Testing for Multiplication/Division.
-- **Solomon Siang**: Developed Logic and Testing for Addition/Subtraction.
+- **Dennis Vo**: Developed logic and testing for Square/Square Root and logic for the Calculator class.
+- **Spencer Smith**: Developed logic and testing for Multiplication/Division.
+- **Solomon Siang**: Developed logic and testing for Addition/Subtraction.
 
 ## Meetings and Discussions
 ## Meeting 1: 8/30/2024 5:00 PM
 - **Medium:** Slack Call
 - **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo, Jake King
-- **Discussion:** Initial project setup and task distribution
-## Meeting 2: 9/3/2024 12:00 PM
-- **Medium:** In-person 
+- **Discussion:** Initial project setup and task distribution.
+## Meeting 2: 9/2/2024 12:30 PM
+- **Medium:** Slack DMs 
+- **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo, Jake King, Tia Self
+- **Discussion:** Additional role assignment and project design. 
+## Meeting 3: 9/3/2024 12:00 PM
+- **Medium:** In-person
 - **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo
-- **Discussion:** Discussed the Calculator Class and what was needed before starting the UI. 
+- **Discussion:** Discussed the Calculator Class and what was needed before starting the UI.
+
 <!-- Format for adding meetings below:
 
 ## Meeting 1: [Date and Time]

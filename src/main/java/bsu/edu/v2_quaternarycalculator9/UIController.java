@@ -8,7 +8,9 @@ public class UIController {
     public TextArea inputBox, outputBox;
     public Button squareRootButton, additionButton, subtractionButton, multiplicationButton, divisionButton, squaredButton, equalsButton, toggleButton, clearButton;
     public Button zeroButton, oneButton, twoButton, threeButton;
+    QuaternaryOperations operations = new QuaternaryOperations();
     public ArrayList<String> userInput = new ArrayList<>();
+    String firstNum, secondNum, operator, result;
 
     public void onClearClicked() {
         inputBox.clear();
@@ -57,12 +59,12 @@ public class UIController {
     }
 
     public void onEqualsButtonClicked() {
-        if (validateInput(userInput) == 0) {
-            // TODO: add logic
-            outputBox.appendText("valid input");
-        } else if (validateInput(userInput) == 1) {
-            // TODO: add logic
-            outputBox.appendText("valid input");
+        if (validateUserInput() == 1) {
+            result = calculateUnaryOperation();
+            outputBox.appendText(result);
+        } else if (validateUserInput() == 2) {
+            result = calculateBinaryOperation();
+            outputBox.appendText(result);
         } else {
             outputBox.appendText("invalid input");
         }
@@ -76,17 +78,52 @@ public class UIController {
         userInput.add(input);
     }
 
-    public int validateInput(ArrayList<String> userInput){
+    public int validateUserInput(){
         if (userInput.size() == 2) {
-            if ((QuaternaryOperations.validQuaternary(userInput.get(0))) && (QuaternaryOperations.validUnaryOperator(userInput.get(1)))) {
-                return 0;
-            }
-        }  else if ((userInput.size() == 3)) {
-            if ((QuaternaryOperations.validQuaternary(userInput.get(0))) && (QuaternaryOperations.validBinaryOperator(userInput.get(1))) && QuaternaryOperations.validQuaternary(userInput.get(2))) {
+            if ((operations.validQuaternary(userInput.get(0))) && (operations.validUnaryOperator(userInput.get(1)))) {
                 return 1;
             }
+        }  else if ((userInput.size() == 3)) {
+            if ((operations.validQuaternary(userInput.get(0))) && (operations.validBinaryOperator(userInput.get(1))) && operations.validQuaternary(userInput.get(2))) {
+                return 2;
+            }
         }
-        return -1;
+        return 0;
     }
+
+    public String calculateUnaryOperation() {
+        firstNum = userInput.get(0);
+        operator = userInput.get(1);
+
+        if (operator.equals("^")) {
+            result = operations.square(firstNum);
+        } else if (operator.equals("&")) {
+            result = operations.squareRoot(firstNum);
+        }
+
+        return result;
+    }
+
+    public String calculateBinaryOperation() {
+        firstNum = userInput.get(0);
+        operator = userInput.get(1);
+        secondNum = userInput.get(2);
+
+        switch (operator) {
+            case "+" -> result = operations.addition(firstNum, secondNum);
+            case "-" -> result = operations.subtraction(firstNum, secondNum);
+            case "*" -> result = operations.multiplication(firstNum, secondNum);
+            case "/" -> {
+                if (operations.convertToDecimal(secondNum) == 0) {
+                    outputBox.appendText("Error: Division by zero.");
+                } else {
+                    result = operations.division(firstNum, secondNum);
+                }
+            }
+        }
+
+        return result;
+    }
+
 
 }

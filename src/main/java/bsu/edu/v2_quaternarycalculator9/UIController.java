@@ -78,14 +78,20 @@ public class UIController {
         userInput.add(input);
     }
 
-    public int validateUserInput(){
-        if (userInput.size() == 2) {
-            if ((operations.validQuaternary(userInput.get(0))) && (operations.validUnaryOperator(userInput.get(1)))) {
-                return 1;
+    public int validateUserInput() {
+        switch (userInput.size()) {
+            case 2 -> {
+                if (operations.validQuaternary(userInput.get(0)) &&
+                    operations.validUnaryOperator(userInput.get(1))) {
+                    return 1;
+                }
             }
-        }  else if ((userInput.size() == 3)) {
-            if ((operations.validQuaternary(userInput.get(0))) && (operations.validBinaryOperator(userInput.get(1))) && operations.validQuaternary(userInput.get(2))) {
-                return 2;
+            case 3 -> {
+                if (operations.validQuaternary(userInput.get(0)) &&
+                    operations.validBinaryOperator(userInput.get(1)) &&
+                    operations.validQuaternary(userInput.get(2))) {
+                    return 2;
+                }
             }
         }
         return 0;

@@ -1,25 +1,10 @@
 package bsu.edu.v2_quaternarycalculator9;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 import java.util.Scanner;
 
-public class Calculator extends Application {
-
-    // this just initializes the UI stuff
-    @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlFile = new FXMLLoader(Calculator.class.getResource("UI.fxml"));
-        Scene scene = new Scene(fxmlFile.load());
-        stage.setScene(scene);
-        stage.show();
-    }
+public class Calculator {
 
     public static void main(String[] args) {
-        launch(); // starts the UI
 
         QuaternaryOperations operations = new QuaternaryOperations();
         Scanner scanner = new Scanner(System.in);

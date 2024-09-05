@@ -5,113 +5,147 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="252.0" spacing="2.0" style="-fx-border-style: solid; -fx-border-color: #222222; -fx-border-radius: 10px; -fx-background-color: #222222; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TextArea fx:id="inputBox" editable="false" opacity="0.5" prefHeight="31.0" prefWidth="401.0">
-         <font>
-            <Font name="Droid Sans Mono" size="12.0" />
-         </font></TextArea>
-      <TextArea fx:id="outputBox" editable="false" opacity="0.5" prefHeight="105.0" prefWidth="401.0">
-         <font>
-            <Font name="Droid Sans Mono" size="14.0" />
-         </font></TextArea>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="clearButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #FF0000;" text="C" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="additionButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="+" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="subtractionButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="-" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="zeroButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="0" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="oneButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="1" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="multiplicationButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="x" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="twoButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="2" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="threeButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="3" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-            <Button fx:id="squareRootButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="√" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin></Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="equalsButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="140.0" style="-fx-background-color: #008000;" text="=" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="squaredButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="x²" textFill="WHITE">
-               <font>
-                  <Font name="Droid Sans Mono" size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin></Button>
-         </children>
-      </HBox>
-   </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="327.0" spacing="2.0" style="-fx-border-style: solid; -fx-border-color: #222222; -fx-border-radius: 10px; -fx-background-color: #222222; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.edu.v2_quaternarycalculator9.CalculatorUI">
    <padding>
       <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
    </padding>
+   <TextArea fx:id="inputBox" editable="false" opacity="0.5" prefHeight="31.0" prefWidth="401.0">
+      <font>
+         <Font name="Droid Sans Mono" size="12.0" />
+      </font>
+   </TextArea>
+   <TextArea fx:id="outputBox" editable="false" opacity="0.5" prefHeight="105.0" prefWidth="401.0">
+      <font>
+         <Font name="Droid Sans Mono" size="14.0" />
+      </font>
+   </TextArea>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <Button fx:id="clearButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClearClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #FF0000;" text="C" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="squaredButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="x²" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="squareRootButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="√" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <Button fx:id="zeroButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onZeroClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="0" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="oneButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onOneClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="1" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="additionButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="+" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <Button fx:id="twoButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTwoClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="2" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="threeButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onThreeClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="3" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="subtractionButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="-" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <Button fx:id="multiplicationButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="x" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="divisionButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #444444;" text="/" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="14.0" layoutY="303.0" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <Button fx:id="equalsButton" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="140.0" style="-fx-background-color: #008000;" text="=" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="toggleButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #c76e00;" text="t" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans Mono" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
 </VBox>

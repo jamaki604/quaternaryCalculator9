@@ -2,15 +2,18 @@ package bsu.edu.v2_quaternarycalculator9;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleButton;
+
 import java.util.ArrayList;
 
 public class UIController {
     public TextArea inputBox, outputBox;
-    public Button squareRootButton, additionButton, subtractionButton, multiplicationButton, divisionButton, squaredButton, equalsButton, toggleButton, clearButton;
+    public Button squareRootButton, additionButton, subtractionButton, multiplicationButton, divisionButton, squaredButton, equalsButton, clearButton;
+    public ToggleButton toggleButton;
     public Button zeroButton, oneButton, twoButton, threeButton;
     QuaternaryOperations operations = new QuaternaryOperations();
     public ArrayList<String> userInput = new ArrayList<>();
-    String firstNum, secondNum, operator, result;
+    String firstNum, secondNum, operator, quaternaryResult, decimalResult;
 
     public void onClearClicked() {
         inputBox.clear();
@@ -38,6 +41,7 @@ public class UIController {
         addUserInput("²", "^");
     }
 
+    // don't know if there's a more standard replacement for √, so i just picked something random that wasn't being used, BUT this can be changed if you do know
     public void onSquareRootButtonClicked() {
         addUserInput("√", "&");
     }
@@ -60,21 +64,31 @@ public class UIController {
 
     public void onEqualsButtonClicked() {
         if (validateUserInput() == 1) {
-            result = calculateUnaryOperation();
-            outputBox.appendText(result);
+            quaternaryResult = calculateUnaryOperation();
+            outputBox.setText(quaternaryResult);
         } else if (validateUserInput() == 2) {
-            result = calculateBinaryOperation();
-            outputBox.appendText(result);
+            quaternaryResult = calculateBinaryOperation();
+            outputBox.setText(quaternaryResult);
         } else {
-            outputBox.appendText("invalid input");
+            outputBox.setText("invalid input");
         }
     }
 
     public void onToggleClicked() {
+        decimalResult = String.valueOf(operations.convertToDecimal(quaternaryResult));
+
+        if (toggleButton.isSelected()) {
+            outputBox.setText(decimalResult);
+            toggleButton.setText("Q");
+        } else {
+            outputBox.setText(quaternaryResult);
+            toggleButton.setText("D");
+        }
     }
 
-    public void addUserInput(String displayText, String input) {
-        inputBox.appendText(displayText);
+    // pattern matching wasn't working with √ and ², so they're displayed in the input box differently than how they're actually added in the userInput variable to do calculations
+    public void addUserInput(String display, String input) {
+        inputBox.appendText(display);
         userInput.add(input);
     }
 
@@ -94,6 +108,7 @@ public class UIController {
                 }
             }
         }
+
         return 0;
     }
 
@@ -102,12 +117,12 @@ public class UIController {
         operator = userInput.get(1);
 
         if (operator.equals("^")) {
-            result = operations.square(firstNum);
+            quaternaryResult = operations.square(firstNum);
         } else if (operator.equals("&")) {
-            result = operations.squareRoot(firstNum);
+            quaternaryResult = operations.squareRoot(firstNum);
         }
 
-        return result;
+        return quaternaryResult;
     }
 
     public String calculateBinaryOperation() {
@@ -116,19 +131,19 @@ public class UIController {
         secondNum = userInput.get(2);
 
         switch (operator) {
-            case "+" -> result = operations.addition(firstNum, secondNum);
-            case "-" -> result = operations.subtraction(firstNum, secondNum);
-            case "*" -> result = operations.multiplication(firstNum, secondNum);
+            case "+" -> quaternaryResult = operations.addition(firstNum, secondNum);
+            case "-" -> quaternaryResult = operations.subtraction(firstNum, secondNum);
+            case "*" -> quaternaryResult = operations.multiplication(firstNum, secondNum);
             case "/" -> {
                 if (operations.convertToDecimal(secondNum) == 0) {
-                    outputBox.appendText("Error: Division by zero.");
+                    quaternaryResult = "Error: Division by zero";
                 } else {
-                    result = operations.division(firstNum, secondNum);
+                    quaternaryResult = operations.division(firstNum, secondNum);
                 }
             }
         }
 
-        return result;
+        return quaternaryResult;
     }
 
 

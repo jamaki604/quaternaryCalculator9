@@ -84,10 +84,5 @@ public class QuaternaryOperations {
     public static boolean validQuaternary(String quaternaryNumber){
         return quaternaryNumber.matches("[0-3]+");
     }
-    public static boolean validBinaryOperator(String operator){
-        return operator.matches("[+\\-*/]+");
-    }
-    public static boolean validUnaryOperator(String operator){
-        return operator.matches("[\\^&]+");
-    }
+
 }

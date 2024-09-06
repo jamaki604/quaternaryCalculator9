@@ -5,6 +5,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class UIController {
     public TextArea inputBox, outputBox;
@@ -12,7 +13,7 @@ public class UIController {
     public ToggleButton toggleButton;
     public Button zeroButton, oneButton, twoButton, threeButton;
     QuaternaryOperations operations = new QuaternaryOperations();
-    public ArrayList<String> userInput = new ArrayList<>();
+    public ArrayList<String> userInput = new ArrayList<>(); // this could be changed to something else if there's a better way, i just used an arraylist since i could append each input to it
     String firstNum, secondNum, operator, quaternaryResult, decimalResult;
 
     public void onClearClicked() {
@@ -41,7 +42,6 @@ public class UIController {
         addUserInput("²", "^");
     }
 
-    // don't know if there's a more standard replacement for √, so i just picked something random that wasn't being used, BUT this can be changed if you do know
     public void onSquareRootButtonClicked() {
         addUserInput("√", "&");
     }
@@ -63,6 +63,10 @@ public class UIController {
     }
 
     public void onEqualsButtonClicked() {
+        /*
+        you can mess with this and change it if there's a better way to do this it's not heavy on javafx specific stuff at all
+        just make sure to include the outputBox.setText(quaternaryResult) line so that it gets displayed on the UI
+         */
         if (validateUserInput() == 1) {
             quaternaryResult = calculateUnaryOperation();
             outputBox.setText(quaternaryResult);
@@ -86,36 +90,23 @@ public class UIController {
         }
     }
 
-    // pattern matching wasn't working with √ and ², so they're displayed in the input box differently than how they're actually added in the userInput variable to do calculations
     public void addUserInput(String display, String input) {
         inputBox.appendText(display);
-        userInput.add(input);
+        userInput.add(input); // change this if you change the type of userInput
     }
 
     public int validateUserInput() {
-        switch (userInput.size()) {
-            case 2 -> {
-                if (operations.validQuaternary(userInput.get(0)) &&
-                    operations.validUnaryOperator(userInput.get(1))) {
-                    return 1;
-                }
-            }
-            case 3 -> {
-                if (operations.validQuaternary(userInput.get(0)) &&
-                    operations.validBinaryOperator(userInput.get(1)) &&
-                    operations.validQuaternary(userInput.get(2))) {
-                    return 2;
-                }
-            }
-        }
-
+        /*
+        - i tried turning the  user input arraylist into a string and then use a delimiter, but i probably did something wrong because the
+        output for that was coming out really weird for me
+        - just need to get the right numbers set = firstNum, secondNum, and operator to get the UI to work right
+        - if there is a value for firstNum and operator return 1 and then if that + secondNum had a value return 2 because onEqualsButtonClicked
+        uses that to determine if it should do a unary or binary operation
+         */
         return 0;
     }
 
     public String calculateUnaryOperation() {
-        firstNum = userInput.get(0);
-        operator = userInput.get(1);
-
         if (operator.equals("^")) {
             quaternaryResult = operations.square(firstNum);
         } else if (operator.equals("&")) {
@@ -126,10 +117,6 @@ public class UIController {
     }
 
     public String calculateBinaryOperation() {
-        firstNum = userInput.get(0);
-        operator = userInput.get(1);
-        secondNum = userInput.get(2);
-
         switch (operator) {
             case "+" -> quaternaryResult = operations.addition(firstNum, secondNum);
             case "-" -> quaternaryResult = operations.subtraction(firstNum, secondNum);

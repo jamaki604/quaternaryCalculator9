@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="275.0" spacing="2.0" style="-fx-border-style: solid; -fx-border-color: #222222; -fx-border-radius: 10px; -fx-background-color: #222222; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.edu.v2_quaternarycalculator9.UIController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="275.0" spacing="2.0" style="-fx-border-style: solid; -fx-border-color: #222222; -fx-border-radius: 10px; -fx-background-color: #222222; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.edu.v2_quaternarycalculator9.UIController">
    <padding>
       <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
    </padding>

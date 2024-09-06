@@ -1,3 +1,5 @@
+package bsu.edu.v2_quaternarycalculator9;
+
 import bsu.edu.v2_quaternarycalculator9.QuaternaryOperations;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

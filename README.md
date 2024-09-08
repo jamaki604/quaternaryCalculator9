@@ -1,17 +1,17 @@
 # Quaternary Calculator Group 9
 
 ## Project Overview
-This project is a calculator designed to perform arithmetic operations on quaternary (base-4) numbers. The calculator supports addition, subtraction, multiplication, and division of quaternary numbers. It also allows users to toggle the display between quaternary and decimal (base-10) number systems.
+This project is a calculator designed to perform arithmetic operations on quaternary (base-4) numbers. The calculator supports addition, subtraction, multiplication, division, squaring, and square root of quaternary numbers. It also allows users to toggle the display between quaternary and decimal (base-10) number systems.
 
 ## Features
-- **Basic Arithmetic Operations:** Supports addition, subtraction, multiplication, and division of quaternary numbers.
+- **Basic Arithmetic Operations:** Supports addition, subtraction, multiplication, division, squaring, and square root of quaternary numbers.
 - **Dual Display:** Toggle between quaternary and decimal representations of numbers.
 - **User-Friendly Interface:** Designed to resemble a traditional calculator with only four number buttons (0, 1, 2, 3).
 - **Separate UI and Logic:** Clean separation between the user interface and the business logic, allowing for maintenance and testing.
 
 ## Installation
 ### Prerequisites
-- **Java Development Kit (JDK) 21 or higher**
+- **Java Development Kit (JDK) 17**
 - **IntelliJ IDEA**
 
 ### Setup Instructions
@@ -27,11 +27,12 @@ This project is a calculator designed to perform arithmetic operations on quater
     - IntelliJ will automatically detect and import the project.
 
 3. **Build the Project:**
-    - Ensure that the correct JDK (21) is configured.
+    - Ensure that the correct JDK (17 or 19) is configured.
     - Build the project using the Build menu or by pressing `Ctrl+F9`.
 
 4. **Run the Application:**
     - Use the `Run` option in IntelliJ IDEA to start the calculator.
+    - Ensure that you are running the UI class directly, and not through Gradle.
 
 ## Usage
 ### Basic Operations
@@ -48,9 +49,14 @@ This project is a calculator designed to perform arithmetic operations on quater
 ## Project Structure
 - `.gitignore`: Specifies files and directories to be ignored by Git.
 - `README.md`: This documentation file.
-<!-- add additional information such as 
-src/test/operationTests: Contains unit tests for the project. 
-once structure is determined continue to update-->
+- `QuaternaryOperationsTest.java`: Contains unit tests for Quaternary calculations methods.
+- `UI.java`: Class that acts as runnable application.
+- `UIController.java`: Contains logic and functionality for GUI.
+
+### Branches
+- `main`: Original (but outdated) branch. Contains original commits from before swapping to master branch as new main.
+- `master`: New main branch for usage of JavaFX. Shows that almost all commits are from Tia Self because she created the new branch.
+<!-- add additional information-->
 
 ## Team Members and Contributions
 - **Jake King**: Set up the project structure and handled Git integration.
@@ -71,7 +77,15 @@ once structure is determined continue to update-->
 ## Meeting 3: 9/3/2024 12:00 PM
 - **Medium:** In-person
 - **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo
-- **Discussion:** Discussed the Calculator Class and what was needed before starting the UI.
+- **Discussion:** Calculator Class and what was needed before starting the UI.
+## Meeting 4: 9/6/2024 4:00 PM
+- **Medium:** Slack DMs
+- **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo, Tia Self
+- **Discussion:** Remaining work load/distribution, individual issues with Gradle, potential of activating Shit Happens
+## Meeting 5: 9/8/2024 3:00 PM
+- **Medium:** Slack DMs
+- **Attendees:** Spencer Smith, Solomon Siang, Dennis Vo, Jake King, Tia Self
+- **Discussion:** Finishing touches
 
 <!-- Format for adding meetings below:
 
@@ -88,11 +102,12 @@ once structure is determined continue to update-->
 - Ensure all tests pass before committing to the repository.
 
 ## Dependencies
-- The project uses standard Java libraries. 
-- JUnit5.8.1, opentest4j-1.2.0.jar, apiguardian-api-1.1.2.jar for testing
+- The project uses standard Java libraries, as well as: 
+- JavaFX version 22.0.2 for UI
+- JavaJUnit5.8.1, opentest4j-1.2.0.jar, apiguardian-api-1.1.2.jar for testing
 <!-- update this with other dependencies if needed-->
 
 ## Screenshots
-<!-- add screenshots here --> 
+![subtraction.png](src/main/resources/screenshots/subtraction.png "Subtraction")![square.png](src/main/resources/screenshots/square.png "Square")![multiplication.png](src/main/resources/screenshots/multiplication.png "Multiplication")![division.png](src/main/resources/screenshots/division.png "Division")![addition.png](src/main/resources/screenshots/addition.png "Addition")
 
 
